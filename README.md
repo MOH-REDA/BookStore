@@ -432,28 +432,33 @@ curl -X GET http://localhost:5000/books \
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](./screenshots/home-page.png)
+<img width="1903" height="965" alt="image" src="https://github.com/user-attachments/assets/85007500-b0eb-454a-a750-61293ae0c103" />
 *Description: Landing page with featured books and navigation*
 
 ### Books Catalog
-![Books Catalog](./screenshots/books-catalog.png)
+<img width="1760" height="962" alt="image" src="https://github.com/user-attachments/assets/4058b022-a3fc-4869-a2d0-d1597d0baaf3" />
 *Description: Browse all available books with search and filter options*
 
 ### Book Details
-![Book Details](./screenshots/book-details.png)
+<img width="1887" height="880" alt="image" src="https://github.com/user-attachments/assets/9d45d2af-23a0-4e42-a58f-3872d712bd04" />
 *Description: Detailed view of a selected book with price and description*
 
-### Admin Dashboard
-![Admin Dashboard](./screenshots/admin-dashboard.png)
-*Description: Admin panel for managing books and categories*
-
 ### Keycloak Login
-![Keycloak Login](./screenshots/keycloak-login.png)
+<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/872bfabc-7f1e-44b2-89a6-145d8f090dbc" />
 *Description: Secure OAuth2 login via Keycloak*
 
 ### Category Management
-![Category Management](./screenshots/category-management.png)
+<img width="1905" height="877" alt="image" src="https://github.com/user-attachments/assets/193b2901-e68a-4899-a655-6c8823eea131" />
+
 *Description: Admin interface for managing book categories*
+
+### Contact
+<img width="1487" height="2674" alt="localhost_contact" src="https://github.com/user-attachments/assets/90e69edd-ae3e-4971-b75b-b7ccada82c9b" />
+
+### About
+<img width="1600" height="4463" alt="localhost_about" src="https://github.com/user-attachments/assets/559b1529-940b-4c9b-84e9-f42ce2953deb" />
+
+
 
 ---
 
