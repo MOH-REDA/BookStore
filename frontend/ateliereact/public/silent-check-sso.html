@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Silent Check SSO</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function() {
+        const url = new URL(window.location.href);
+        const params = url.search + url.hash;
+        const redirectUri = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')) + '/index.html';
+        
+        parent.postMessage({
+          hash: url.hash,
+          location: window.location.href
+        }, window.location.origin);
+      };
+    </script>
+  </body>
+</html>

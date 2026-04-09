@@ -1,0 +1,28 @@
+/* Book Edit Page Styling */
+
+.book-edit {
+  width: 100%;
+}
+
+.book-edit .book-form-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.book-edit .book-form h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-edit .book-form h2::before {
+  content: '✎';
+  font-size: 24px;
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .book-edit {
+    padding: 0;
+  }
+}

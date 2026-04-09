@@ -1,0 +1,110 @@
+/* Modern Category Page Styling */
+
+.category-page {
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+/* ============ HERO SECTION ============ */
+
+.category-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+}
+
+.category-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.category-hero p {
+  font-size: 18px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============ CONTAINER ============ */
+
+.category-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* ============ CONTENT LAYOUT ============ */
+
+.category-content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.category-form-section {
+  position: sticky;
+  top: 20px;
+}
+
+.category-list-section {
+  min-height: 400px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 1100px) {
+  .category-container {
+    padding: 40px 20px;
+  }
+
+  .category-content {
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .category-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .category-form-section {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-hero {
+    padding: 50px 20px;
+  }
+
+  .category-hero h1 {
+    font-size: 32px;
+  }
+
+  .category-hero p {
+    font-size: 16px;
+  }
+
+  .category-container {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-hero {
+    padding: 40px 15px;
+  }
+
+  .category-hero h1 {
+    font-size: 26px;
+  }
+}

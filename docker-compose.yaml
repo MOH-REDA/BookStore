@@ -1,0 +1,78 @@
+  services:
+    mongodb:
+      image: mongo:latest
+      container_name: mongodb
+      restart: always
+      ports:
+        - "27017:27017"
+      volumes:
+        - mongodb_data:/data/db
+        - mongodb_config:/data/configdb
+      networks:
+        - bookstore-network
+
+    mongo-express:
+      image: mongo-express:latest
+      container_name: mongo-express
+      restart: always
+      ports:
+        - "8081:8081"
+      environment:
+        ME_CONFIG_MONGODB_SERVER: mongodb
+        ME_CONFIG_BASICAUTH: "false"
+      depends_on:
+        - mongodb
+      networks:
+        - bookstore-network
+
+    keycloak:
+      image: quay.io/keycloak/keycloak:25.0.2
+      command: start-dev
+      environment:
+        KEYCLOAK_ADMIN: admin
+        KEYCLOAK_ADMIN_PASSWORD: admin
+        KC_HTTP_ENABLED: "true"
+        KC_HOSTNAME_STRICT: "false"
+        KC_DB: dev-file
+      ports:
+        - "8080:8080"
+      volumes:
+        - keycloak_data:/opt/keycloak/data
+      networks:
+        - bookstore-network
+
+    backend:
+      build: ./backend
+      container_name: backend
+      restart: always
+      ports:
+        - "5000:5000"
+      environment:
+        MONGODB_URI: mongodb://mongodb:27017/booksdb
+        KEYCLOAK_URL: http://keycloak:8080
+        KEYCLOAK_REALM: bookstore-realm
+      depends_on:
+        - mongodb
+        - keycloak
+      networks:
+        - bookstore-network
+
+    frontend:
+      build: ./frontend/ateliereact
+      container_name: frontend
+      restart: always
+      ports:
+        - "80:80"
+      depends_on:
+        - backend
+      networks:
+        - bookstore-network
+
+  networks:
+    bookstore-network:
+      driver: bridge
+
+  volumes:
+    mongodb_data:
+    mongodb_config:
+    keycloak_data:

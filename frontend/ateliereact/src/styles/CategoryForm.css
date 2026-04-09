@@ -1,0 +1,132 @@
+/* Category Form Component Styling */
+
+.category-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.category-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #667eea;
+}
+
+.category-form h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.category-form .form-group {
+  margin-bottom: 25px;
+}
+
+.category-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.category-form input,
+.category-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.category-form input:focus,
+.category-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.category-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.category-form .form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.category-form button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-form button.submit {
+  background-color: #667eea;
+  color: white;
+}
+
+.category-form button.submit:hover {
+  background-color: #5568d3;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.category-form button.cancel {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.category-form button.cancel:hover {
+  background-color: #d0d0d0;
+}
+
+.category-form .error {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #856404;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.category-form .success {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+  color: #155724;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.category-form .loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .category-form {
+    padding: 20px;
+  }
+
+  .category-form h3 {
+    font-size: 18px;
+  }
+
+  .category-form .form-actions {
+    flex-direction: column;
+  }
+}

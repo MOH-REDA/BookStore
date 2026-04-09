@@ -1,0 +1,26 @@
+# Node (all projects)
+node_modules/
+
+# Env files
+.env
+.env.*
+
+# Build
+dist/
+build/
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Docker
+*.tar
